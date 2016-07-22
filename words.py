@@ -1,4 +1,4 @@
-
+#!usr/bin/env python3
 # coding: utf-8
 
 # In[ ]:
@@ -6,6 +6,16 @@ import sys
 from urllib.request import urlopen
 
 def fetch_words(url):
+    # Comments in python scripts are marked by # :)
+    """Fetch a list of words from a URL.
+
+    Args:
+        url: The URL of a UTF-8 text documents.
+
+    Returns:
+    A list of string containing the words from the documents.  
+
+"""
     with urlopen(url) as story:
         story_words = []
         for line in story:
